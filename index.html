@@ -9,23 +9,23 @@
     <title>Lista de Jogos</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="#">Lista de Jogos</a>
-      </nav>
+    <header>      
+        <a id="header-logo" href="#">Lista de Jogos</a>
+      
     </header>
 
-    <main class="container">
-      <section class="main-container">
+    <main>
+      <div id="barra-pesquisa-container">
         <input
           type="text"
           id="barra-pesquisa"
           placeholder="Digite o nome do jogo"
         />
-        <button id="barra-pesquisa" onclick="">Pesquisar</button>
-        <section class="img-container">
-          <img src="#" alt="item1" />
-          <ul>
+        <button id="barra-pesquisa-botao" onclick="">Pesquisar</button>
+      </div>
+        <section class="jogo-container">
+          <img class="jogo-logo" src="./img/fallout-4-logo.png" alt="item1" />
+          <ul class="lista-jogo">
             <li>Nome: <a href="https://pt.wikipedia.org/wiki/Fallout_4">Fallout 4</a></li>
             <li>Genero: RPG</li>
             <li>Descrição:
@@ -35,24 +35,47 @@
             <li>Preço Atual: R$119.99</li>
           </ul>
         </section>
-        <section class="img-container">
-          <img src="#" alt="item1" />
-          
+        <section class="jogo-container">
+          <img class="jogo-logo" src="./img/divinity-logo.png" alt="item2" />
+          <ul class="lista-jogo">
+            <li>Nome: <a href="https://pt.wikipedia.org/wiki/Fallout_4">Divinity: Original Sin 2</a></li>
+            <li>Genero: RPG</li>
+            <li>Descrição:
+                "Reúna seu grupo e prepare-se para uma aventura fantástica! Sua imaginação é o único limite na sua busca por restaurar do Divino e salvar o mundo. Combine os elementos para aniquilar seus inimigos. Use técnicas para subverter tudo no seu caminho. Seja você um elfo, humano, anão, lagarto ou morto-vivo, as pessoas vão saber das suas viagens e vão reagir aos seus feitos."</li>
+            <li>Lançamento: 14 de setembro de 2017</li>
+            <li>Plataforma: "Nintendo Switch",
+              "PlayStation 4",
+              "Xbox One",
+              "macOS",
+              "Microsoft Windows"</li>
+            <li>Preço Atual: R$90.99</li>
+          </ul>
         </section>
-        <section class="img-container">
-          <img src="#" alt="item1" />
-          
-        </section>
-      </section>      
+        <section class="jogo-container">
+          <img class="jogo-logo" src="./img/tomb-raider-logo.png" alt="item3" />
+          <ul class="lista-jogo">
+            <li>Nome: <a href="https://pt.wikipedia.org/wiki/Fallout_4">Shadow of The Tomb Raider"</a></li>
+            <li>Genero: RPG</li>
+            <li>Descrição:
+                "Em Shadow of the Tomb Raider Definitive Edition, acompanhe o capítulo final da origem de Lara e testemunhe sua     transformação na desbravadora que ela está destinada a ser. Combinando o jogo-base e todas as sete tumbas de    desafio de DLC, além de armas, roupas e habilidades extras, Shadow of the Tomb Raider Definitive Edition é a melhor    maneira de viver o momento decisivo da vida de Lara."</li>
+            <li>Lançamento: 12 de setembro de 2018</li>
+            <li>
+              "PlayStation 4",
+              "Xbox One",
+              "macOS",
+              "Microsoft Windows",
+              "Linux",
+              "Google Stadia",
+              "Mac OS Classic"</li>
+            <li>Preço Atual: R$145.9</li>
+          </ul>
+        </section>     
     </main>
 
     <footer>
-      <a href="#">Lista de Jogos</a>
-      <img src="#" alt="redesocial" />
-      <img src="#" alt="redesocial" />
-      <img src="#" alt="redesocial" />
-      <img src="#" alt="redesocial" />
-      <img src="#" alt="redesocial" />
+      <p id="texto-footer">Feito por Diego Cezar</p>      
+      <a id="imagem-redesocial-footer" href="https://github.com/dgcezar"><img src="./img/icone-github.png" alt="github" /></a>
+      
     </footer>
   </body>
 </html>

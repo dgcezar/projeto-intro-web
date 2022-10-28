@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration:none;
+}
+
+header {
+    display: flex;
+    background-color: indigo;
+    height: 60px;
+    width: auto;
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(215, 3, 235);
+    border-bottom: 2px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+
+#header-logo {
+    color: azure;
+    font-size: 26px;
+    margin-left: 40px;
+}
+
+#barra-pesquisa-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#barra-pesquisa {
+    border-radius: 20px;
+    border-style: solid;
+    border-color: grey;   
+    padding: 8px 150px; 
+}
+
+#barra-pesquisa-botao {
+    margin-left: 10px;
+    background-color: rgb(127, 1, 218);
+    color: azure;
+    border-radius: 20px;
+    padding: 4px 10px;    
+}
+
+main {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+.jogo-container {
+    display: flex;
+    align-items: center;    
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-color: rgb(215, 3, 235);
+    border-radius: 1px;
+    height: 300px;
+    width: 800px;
+    background-color: rgb(22, 0, 37);
+    color: azure;
+}
+
+.lista-jogo {
+    list-style-type: none;
+}
+
+.jogo-logo {
+    width: 100px;
+}
+
+footer {
+    display: flex;
+    background-color: darkorchid;
+    height: 60px;
+    width: auto;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-color: rgb(215, 3, 235);
+    border-radius: 1px;
+    border-style: solid;
+}
+
+#texto-footer {
+    font-size: 20px;
+    color: azure;
+}
+
+#imagem-redesocial-footer {
+    margin-left: 10px;
+}

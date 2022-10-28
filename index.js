@@ -49,7 +49,7 @@ const listaJogos = [];
 
 // Adicionar os objetos ao array vázio
 listaJogos.push(jogo1,jogo2,jogo3);
-console.log(listaJogos);
+// console.log(listaJogos);
 
 // Tornar os array dos objetos em string
 // console.log(jogo1.plataforma.join(), jogo2.plataforma.join(), jogo3.plataforma.join())
@@ -63,17 +63,37 @@ console.log(listaJogos);
 // }
 
 // Criar uma função que receba como parâmetro um objeto e devolva a string do relatório com dados do objeto
-const relatorioJogo = (param) => {  
-  for(i in listaJogos){
-    if (param === listaJogos[i]) {
-      console.log(`${param.join()}: ${param}`)
-    }
-  }
-console.log("----------------------");
+// const relatorioJogo = (listaJogos) => {  
+//   for(i in listaJogos){
+//     console.log(listaJogos[i].titulo, listaJogos[i].genero, listaJogos[i].descricao, listaJogos[i].lancamento, listaJogos[i].plataforma, listaJogos[i].precoAtual, listaJogos[i].jogoDoAno)
+//   }
+// };
+// console.log(relatorioJogo(listaJogos));
 
-}
-relatorioJogo(jogo1);
+// Crie uma função que recebe um array de objetos e uma string. Esta função deve retornar um objeto, e o objeto retornado deve possuir apenas os itens que tenham o nome/título igual à string passada como parâmetro. Caso não exista um item, exiba um ALERT indicando que nenhum item foi encontrado.
+// const pesquisaJogo = (jogo) => {
+//   for(i in listaJogos){
+//     if (jogo === listaJogos[i].titulo) {
+//       console.log(listaJogos[i].titulo)
+//     } else {
+//       alert("nenhum item foi encontrado")
+//     }
+//   }
+// }
+// const pesquisaJogo = (jogo) => {
+//   for(i in listaJogos){
+//     switch(jogo) {
+//       case listaJogos[i].titulo:
+//         console.log(listaJogos[i].titulo);
+//         break;
+//         default:
+//         alert("nenhum item foi encontrado");
+//     }
+//   }
+// }
 
+// console.log(pesquisaJogo("FALLOUT 4"));
+// console.log(listaJogos[0].titulo)
 
 // Adicionar condição de verdadeiro ao adicionar objetos na lista
 // if (jogo1.jogoDoAno === true) {
