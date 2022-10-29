@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="index.js"></script>
+   
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Lista de Jogos</title>
   </head>
   <body>
-    <header>      
-        <a id="header-logo" href="#">Lista de Jogos</a>
-      
+    <header>
+      <a id="header-logo" href="#">Lista de Jogos</a>
     </header>
 
     <main>
@@ -21,61 +26,87 @@
           id="barra-pesquisa"
           placeholder="Digite o nome do jogo"
         />
-        <button id="barra-pesquisa-botao" onclick="">Pesquisar</button>
+        <button id="barra-pesquisa-botao" onclick="pesquisaJogo()">Pesquisar</button>
       </div>
-        <section class="jogo-container">
-          <img class="jogo-logo" src="./img/fallout-4-logo.png" alt="item1" />
-          <ul class="lista-jogo">
-            <li>Nome: <a href="https://pt.wikipedia.org/wiki/Fallout_4">Fallout 4</a></li>
-            <li>Genero: RPG</li>
-            <li>Descrição:
-                "O jogador é o único sobrevivente do Vault 111 que emerge 210 anos após o dia da Grande Guerra. Antes disso,  ocorre um período de jogo durante a era pré-Guerra mostrando o jogador vivendo com sua esposa e filho."</li>
-            <li>Lançamento: 10 de novembro de 2015</li>
-            <li>Plataforma: PlayStation 4", "Xbox One", "macOS", "Microsoft Windows</li>
-            <li>Preço Atual: R$119.99</li>
-          </ul>
-        </section>
-        <section class="jogo-container">
-          <img class="jogo-logo" src="./img/divinity-logo.png" alt="item2" />
-          <ul class="lista-jogo">
-            <li>Nome: <a href="https://pt.wikipedia.org/wiki/Fallout_4">Divinity: Original Sin 2</a></li>
-            <li>Genero: RPG</li>
-            <li>Descrição:
-                "Reúna seu grupo e prepare-se para uma aventura fantástica! Sua imaginação é o único limite na sua busca por restaurar do Divino e salvar o mundo. Combine os elementos para aniquilar seus inimigos. Use técnicas para subverter tudo no seu caminho. Seja você um elfo, humano, anão, lagarto ou morto-vivo, as pessoas vão saber das suas viagens e vão reagir aos seus feitos."</li>
-            <li>Lançamento: 14 de setembro de 2017</li>
-            <li>Plataforma: "Nintendo Switch",
-              "PlayStation 4",
-              "Xbox One",
-              "macOS",
-              "Microsoft Windows"</li>
-            <li>Preço Atual: R$90.99</li>
-          </ul>
-        </section>
-        <section class="jogo-container">
-          <img class="jogo-logo" src="./img/tomb-raider-logo.png" alt="item3" />
-          <ul class="lista-jogo">
-            <li>Nome: <a href="https://pt.wikipedia.org/wiki/Fallout_4">Shadow of The Tomb Raider"</a></li>
-            <li>Genero: RPG</li>
-            <li>Descrição:
-                "Em Shadow of the Tomb Raider Definitive Edition, acompanhe o capítulo final da origem de Lara e testemunhe sua     transformação na desbravadora que ela está destinada a ser. Combinando o jogo-base e todas as sete tumbas de    desafio de DLC, além de armas, roupas e habilidades extras, Shadow of the Tomb Raider Definitive Edition é a melhor    maneira de viver o momento decisivo da vida de Lara."</li>
-            <li>Lançamento: 12 de setembro de 2018</li>
-            <li>
-              "PlayStation 4",
-              "Xbox One",
-              "macOS",
-              "Microsoft Windows",
-              "Linux",
-              "Google Stadia",
-              "Mac OS Classic"</li>
-            <li>Preço Atual: R$145.9</li>
-          </ul>
-        </section>     
+      <section class="jogo-container">
+        <img class="jogo-logo" src="./img/fallout-4-logo.png" alt="item1" />
+        <ul class="lista-jogo">
+          <li>
+            Título:
+            <a id="link-titulo" href="https://pt.wikipedia.org/wiki/Fallout_4">FALLOUT 4</a>
+          </li>
+          <li>Gênero: RPG</li>
+          <li>
+            Descrição: "O jogador é o único sobrevivente do Vault 111 que emerge
+            210 anos após o dia da Grande Guerra. Antes disso, ocorre um período
+            de jogo durante a era pré-Guerra mostrando o jogador vivendo com sua
+            esposa e filho."
+          </li>
+          <li>Lançamento: 10 de novembro de 2015</li>
+          <li>Plataforma: PlayStation 4, Xbox One, macOS, Microsoft Windows</li>
+          <li>Preço Atual: R$ 119.99</li>
+        </ul>
+      </section>
+      <section class="jogo-container">
+        <img class="jogo-logo" src="./img/divinity-logo.png" alt="item2" />
+        <ul class="lista-jogo">
+          <li>
+            Título:
+            <a id="link-titulo" href="https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II"
+              >DIVINITY: ORIGINAL SIN 2</a
+            >
+          </li>
+          <li>Gênero: RPG</li>
+          <li>
+            Descrição: "Reúna seu grupo e prepare-se para uma aventura
+            fantástica! Sua imaginação é o único limite na sua busca por
+            restaurar do Divino e salvar o mundo. Combine os elementos para
+            aniquilar seus inimigos. Use técnicas para subverter tudo no seu
+            caminho. Seja você um elfo, humano, anão, lagarto ou morto-vivo, as
+            pessoas vão saber das suas viagens e vão reagir aos seus feitos."
+          </li>
+          <li>Lançamento: 14 de setembro de 2017</li>
+          <li>
+            Plataforma: Nintendo Switch, PlayStation 4, Xbox One, macOS,
+            Microsoft Windows
+          </li>
+          <li>Preço Atual: R$ 90.99</li>
+        </ul>
+      </section>
+      <section class="jogo-container">
+        <img class="jogo-logo" src="./img/tomb-raider-logo.png" alt="item3" />
+        <ul class="lista-jogo">
+          <li>
+            Título:
+            <a id="link-titulo" href="https://en.wikipedia.org/wiki/Shadow_of_the_Tomb_Raider"
+              >SHADOW OF THE TOMB RAIDER</a
+            >
+          </li>
+          <li>Gênero: RPG</li>
+          <li>
+            Descrição: "Em Shadow of the Tomb Raider Definitive Edition,
+            acompanhe o capítulo final da origem de Lara e testemunhe sua
+            transformação na desbravadora que ela está destinada a ser.
+            Combinando o jogo-base e todas as sete tumbas de desafio de DLC,
+            além de armas, roupas e habilidades extras, Shadow of the Tomb
+            Raider Definitive Edition é a melhor maneira de viver o momento
+            decisivo da vida de Lara."
+          </li>
+          <li>Lançamento: 12 de setembro de 2018</li>
+          <li>
+            PlayStation 4, Xbox One, macOS, Microsoft Windows, Linux, Google
+            Stadia, Mac OS Classic
+          </li>
+          <li>Preço Atual: R$ 145.90</li>
+        </ul>
+      </section>
     </main>
-
+    <script src="index.js"></script>
     <footer>
-      <p id="texto-footer">Feito por Diego Cezar</p>      
-      <a id="imagem-redesocial-footer" href="https://github.com/dgcezar"><img src="./img/icone-github.png" alt="github" /></a>
-      
+      <p id="texto-footer">Feito por Diego Cezar</p>
+      <a id="imagem-redesocial-footer" href="https://github.com/dgcezar"
+        ><img src="./img/icone-github.png" alt="github"
+      /></a>
     </footer>
   </body>
 </html>

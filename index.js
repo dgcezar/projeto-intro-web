@@ -44,91 +44,67 @@ let jogo3 = {
   precoAtual: 145.9,
   jogoDoAno: true,
 };
-// Criar array vázio
+
+// Criar array vázio:
 const listaJogos = [];
 
-// Adicionar os objetos ao array vázio
+// Adicionar os objetos ao array vázio:
 listaJogos.push(jogo1,jogo2,jogo3);
 // console.log(listaJogos);
 
-// Tornar os array dos objetos em string
-// console.log(jogo1.plataforma.join(), jogo2.plataforma.join(), jogo3.plataforma.join())
+// Relatório impresso com as informações de cada item:
+const relatorioJogo = (listaJogos) => {  
+  for(i in listaJogos){
+    console.log(listaJogos[i].titulo, listaJogos[i].genero, listaJogos[i].descricao, listaJogos[i].lancamento, listaJogos[i].plataforma, listaJogos[i].precoAtual, listaJogos[i].jogoDoAno)
+  }
+};
+console.log(relatorioJogo(listaJogos));
 
-// Criar um laço para exibir os objetos
-// for(jogo of listaJogos){
-//   for (i in jogo){
-//       console.log(`${i}: ${jogo[i]}`)
-//   }
-// console.log("----------------------");
-// }
-
-// Criar uma função que receba como parâmetro um objeto e devolva a string do relatório com dados do objeto
-// const relatorioJogo = (listaJogos) => {  
-//   for(i in listaJogos){
-//     console.log(listaJogos[i].titulo, listaJogos[i].genero, listaJogos[i].descricao, listaJogos[i].lancamento, listaJogos[i].plataforma, listaJogos[i].precoAtual, listaJogos[i].jogoDoAno)
-//   }
-// };
-// console.log(relatorioJogo(listaJogos));
-
-// Crie uma função que recebe um array de objetos e uma string. Esta função deve retornar um objeto, e o objeto retornado deve possuir apenas os itens que tenham o nome/título igual à string passada como parâmetro. Caso não exista um item, exiba um ALERT indicando que nenhum item foi encontrado.
-// const pesquisaJogo = (jogo) => {
-//   for(i in listaJogos){
-//     if (jogo === listaJogos[i].titulo) {
-//       console.log(listaJogos[i].titulo)
-//     } else {
-//       alert("nenhum item foi encontrado")
-//     }
-//   }
-// }
-// const pesquisaJogo = (jogo) => {
-//   for(i in listaJogos){
-//     switch(jogo) {
-//       case listaJogos[i].titulo:
-//         console.log(listaJogos[i].titulo);
-//         break;
-//         default:
-//         alert("nenhum item foi encontrado");
-//     }
-//   }
-// }
-
-// console.log(pesquisaJogo("FALLOUT 4"));
-// console.log(listaJogos[0].titulo)
-
-// Adicionar condição de verdadeiro ao adicionar objetos na lista
-// if (jogo1.jogoDoAno === true) {
-//   listaJogos.push(jogo1);
-// } else {
-//   alert("Esse jogo não é válido");
-// }
-// if (jogo2.jogoDoAno === true) {
-//   listaJogos.push(jogo2);
-// } else {
-//   alert("Esse jogo não é válido");
-// }
-// if (jogo3.jogoDoAno === true) {
-//   listaJogos.push(jogo3);
-// } else {
-//   alert("Esse jogo não é válido");
-// }
-// console.log(listaJogos);
-
-
-
-// Cálculo de média
-// const mediaPreco = (jogo1.precoAtual + jogo2.precoAtual + jogo3.precoAtual) / 3;
-// console.log(mediaPreco);
+// Média numérica calculada e impressa no console:
+const mediaPreco = (jogo1.precoAtual + jogo2.precoAtual + jogo3.precoAtual) / 3;
+const resultadoMediaPreco = `A média dos preços dos jogos é: ${mediaPreco}`;
+console.log(resultadoMediaPreco);
 
 // // Verificação de booleanos
-// const saoJogosDoAno = jogo1.jogoDoAno && jogo2.jogoDoAno && jogo3.jogoDoAno;
-// console.log(saoJogosDoAno);
+function verificarBooleanos() {
+for(i in listaJogos){
+if (listaJogos[i].jogoDoAno === true) {
+  console.log(`O jogo ${listaJogos[i].titulo} é jogo do ano. ${listaJogos[i].jogoDoAno}`);
+} else {
+  console.log(`O jogo ${listaJogos[i].titulo} não é jogo do ano. ${listaJogos[i].jogoDoAno}`);
+}
+}
+}
+console.log(verificarBooleanos());
 
-// console.log(jogo1, jogo2, jogo3);
+// Pesquisa dos jogos:
+const pesquisaJogo = (jogo) => {
+  jogo = document.getElementById("barra-pesquisa").value;
+  for(i in listaJogos){
+    if (jogo === listaJogos[i].titulo) {
+      console.log(listaJogos[i].titulo);
+      break;
+    } else if (jogo === "") {
+      alert("Digite algo na barra de pesquisa!");
+      break;
+    } else {
+      alert("nenhum item foi encontrado")
+      break;
+    }
+  }
+}
 
-// for (let jogo of jogos) {
-//   for (let propriedades in jogos) {
-//     console.log(`${propriedades}: ${jogo[propriedades]}`)
+// function pesquisaJogo() {
+//   let input = document.getElementById('barra-pesquisa').value
+//   input = input.toLowerCase();
+//   let x = document.getElementsByClassName('link-titulo');
+    
+//   for (i = 0; i < x.length; i++) { 
+//       if (!x[i].innerHTML.toLowerCase().includes(input)) {
+//           x[i].style.display="none";
+//       }
+//       else {
+//           x[i].style.display="list-item";                 
+//       }
 //   }
 // }
-
-//jogos.jogoDoAno ? jogos.push("sim") : alert("Não pode ser adicionado");
