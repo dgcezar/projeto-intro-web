@@ -49,13 +49,18 @@ let jogo3 = {
 const listaJogos = [];
 
 // Adicionar os objetos ao array vázio:
-listaJogos.push(jogo1,jogo2,jogo3);
-// console.log(listaJogos);
+listaJogos.push(jogo1, jogo2, jogo3);
 
 // Relatório impresso com as informações de cada item:
-const relatorioJogo = (listaJogos) => {  
-  for(i in listaJogos){
-    console.log(listaJogos[i].titulo, listaJogos[i].genero, listaJogos[i].descricao, listaJogos[i].lancamento, listaJogos[i].plataforma, listaJogos[i].precoAtual, listaJogos[i].jogoDoAno)
+const relatorioJogo = (listaJogos) => {
+  for (i in listaJogos) {
+    console.log(`Título: ${listaJogos[i].titulo},
+     Gênero: ${listaJogos[i].genero},
+     Descrição: ${listaJogos[i].descricao},
+     Lançamento: ${listaJogos[i].lancamento},
+     Plataforma: ${listaJogos[i].plataforma},
+     Preço atual: ${listaJogos[i].precoAtual},
+     Foi jogo do ano? ${listaJogos[i].jogoDoAno}`);
   }
 };
 console.log(relatorioJogo(listaJogos));
@@ -65,22 +70,26 @@ const mediaPreco = (jogo1.precoAtual + jogo2.precoAtual + jogo3.precoAtual) / 3;
 const resultadoMediaPreco = `A média dos preços dos jogos é: ${mediaPreco}`;
 console.log(resultadoMediaPreco);
 
-// // Verificação de booleanos
+// Verificação de booleanos
 function verificarBooleanos() {
-for(i in listaJogos){
-if (listaJogos[i].jogoDoAno === true) {
-  console.log(`O jogo ${listaJogos[i].titulo} é jogo do ano. ${listaJogos[i].jogoDoAno}`);
-} else {
-  console.log(`O jogo ${listaJogos[i].titulo} não é jogo do ano. ${listaJogos[i].jogoDoAno}`);
-}
-}
+  for (i in listaJogos) {
+    if (listaJogos[i].jogoDoAno === true) {
+      console.log(
+        `O jogo ${listaJogos[i].titulo} é jogo do ano. ${listaJogos[i].jogoDoAno}`
+      );
+    } else {
+      console.log(
+        `O jogo ${listaJogos[i].titulo} não é jogo do ano. ${listaJogos[i].jogoDoAno}`
+      );
+    }
+  }
 }
 console.log(verificarBooleanos());
 
 // Pesquisa dos jogos:
 const pesquisaJogo = (jogo) => {
   jogo = document.getElementById("barra-pesquisa").value;
-  for(i in listaJogos){
+  for (i in listaJogos) {
     if (jogo === listaJogos[i].titulo) {
       console.log(listaJogos[i].titulo);
       break;
@@ -88,23 +97,8 @@ const pesquisaJogo = (jogo) => {
       alert("Digite algo na barra de pesquisa!");
       break;
     } else {
-      alert("nenhum item foi encontrado")
+      alert("nenhum item foi encontrado");
       break;
     }
   }
-}
-
-// function pesquisaJogo() {
-//   let input = document.getElementById('barra-pesquisa').value
-//   input = input.toLowerCase();
-//   let x = document.getElementsByClassName('link-titulo');
-    
-//   for (i = 0; i < x.length; i++) { 
-//       if (!x[i].innerHTML.toLowerCase().includes(input)) {
-//           x[i].style.display="none";
-//       }
-//       else {
-//           x[i].style.display="list-item";                 
-//       }
-//   }
-// }
+};
